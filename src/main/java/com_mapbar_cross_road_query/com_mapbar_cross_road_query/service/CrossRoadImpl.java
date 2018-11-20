@@ -2,9 +2,11 @@ package com_mapbar_cross_road_query.com_mapbar_cross_road_query.service;
 
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import org.springframework.stereotype.Service;
 
 import java.sql.*;
 
+@Service
 public class CrossRoadImpl implements CrossRoad{
 
     @Override
