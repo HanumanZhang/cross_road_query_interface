@@ -50,6 +50,12 @@
             <version>3.8.1</version>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.apache.phoenix</groupId>
+            <artifactId>phoenix-core</artifactId>
+            <version>4.7.0-HBase-1.1</version>
+        </dependency>
     </dependencies>
 
 </project>

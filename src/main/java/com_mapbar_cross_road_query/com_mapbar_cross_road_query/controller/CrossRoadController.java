@@ -36,7 +36,7 @@ public class CrossRoadController extends BaseAction {
 
         JSONArray data = crossRoad.getDatadiffByRoadId(Integer.parseInt(roadOne), Integer.parseInt(roadTwo));
 
-        resultBean.setData("测试");
+        resultBean.setData(data);
         resultBean.fillResult(EnumResultCode.SUCCESS);
         this.sendJson(response, resultBean);
     }

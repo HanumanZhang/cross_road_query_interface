@@ -9,7 +9,7 @@ public class MyUtils {
         try {
             prop = new Properties();
 
-            FileReader fr = new FileReader("/root/springboothphoenixtime/application.properties");
+            FileReader fr = new FileReader("D:\\SoftWare\\Git\\com_mapbar_cross_road_query\\src\\main\\resources\\application.properties");
             prop.load(fr);
         } catch (Exception e) {
             e.printStackTrace();

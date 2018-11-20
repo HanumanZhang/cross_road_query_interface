@@ -22,11 +22,11 @@ public class CrossRoadImpl implements CrossRoad{
             PreparedStatement pstm = conn.prepareStatement(sql);
 
             ResultSet resultSet = pstm.executeQuery();
-            resultSet.last();
-            int row = resultSet.getRow();
+//            resultSet.last();
+//            int row = resultSet.getRow();
             jsonArray = new JSONArray();
-            if (row>=0){
-                resultSet.beforeFirst();
+//            if (row>=0){
+//                resultSet.beforeFirst();
                 while (resultSet.next()){
                     int roadIdOne = resultSet.getInt("ROADIDONE");
                     int roadIdTwo = resultSet.getInt("ROADIDTWO");
@@ -36,11 +36,11 @@ public class CrossRoadImpl implements CrossRoad{
                     JSONObject json= JSONObject.fromObject(data);
                     jsonArray.add(json);
                 }
-            }else{
-                String data = "{\"status\":\"未查到\"}";
-                JSONObject json= JSONObject.fromObject(data);
-                jsonArray.add(json);
-            }
+//            }else{
+//                String data = "{\"status\":\"未查到\"}";
+//                JSONObject json= JSONObject.fromObject(data);
+//                jsonArray.add(json);
+//            }
         } catch (Exception e) {
             e.printStackTrace();
         }
