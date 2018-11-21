@@ -9,7 +9,7 @@ public class MyUtils {
         try {
             prop = new Properties();
 
-            FileReader fr = new FileReader("D:\\SoftWare\\Git\\com_mapbar_cross_road_query\\src\\main\\resources\\application.properties");
+            FileReader fr = new FileReader("/data/road_interface_conf/cross_road_price_conf/application.properties");
             prop.load(fr);
         } catch (Exception e) {
             e.printStackTrace();
