@@ -30,7 +30,12 @@ public class CrossRoadImpl implements CrossRoad{
                 while (resultSet.next()){
                     int roadIdOne = resultSet.getInt("ROADIDONE");
                     int roadIdTwo = resultSet.getInt("ROADIDTWO");
-                    int date = resultSet.getInt("DAYHOUR");
+                    String date = "";
+                    if (resultSet.getInt("DAYHOUR")<=9){
+                        date = "0"+resultSet.getInt("DAYHOUR");
+                    }else{
+                        date = resultSet.getInt("DAYHOUR")+"";
+                    }
                     double time = resultSet.getDouble("ROADPRICETIME");
                     String data = "{\"ROADIDONE\":\""+ roadIdOne+"\",\"ROADIDTWO\":\""+roadIdTwo+"\",\"DAYHOUR\":\""+date+"\",\"ROADPRICETIME\":\""+time+"\"}";
                     JSONObject json= JSONObject.fromObject(data);
